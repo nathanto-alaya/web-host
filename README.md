@@ -6,8 +6,7 @@ Internal working documents for the 27 October webinar.
 
 | File | What it is |
 |---|---|
-| `index.html` | Hub page, links to everything below |
-| `structures.html` | 3 options for the 60 minute session, side by side |
+| `index.html` | The 3 structures, in full, plus links to everything below |
 | `email-sequence.html` | 16 campaign emails, written in full |
 | `story-bank.html` | Real client stories with sources and freshness flags |
 | `ads-brief.html` | Timeline, budget questions, paid versus free |

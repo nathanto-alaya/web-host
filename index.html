@@ -10,86 +10,250 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Lato:wght@400;700&display=swap">
 <style>
   :root {
-    --royal:#1A1C8F; --navy:#0D0E5C; --mid:#2428B8; --tint:#E8E9F8;
-    --paper:#FAFAFD; --card:#FFFFFF; --ink:#0D0E5C; --ink-strong:#07082E; --rule:#C9CBEC;
+    --royal:#1A1C8F; --navy:#0D0E5C; --mid:#2428B8;
+    --paper:#FFFFFF; --card:#FFFFFF; --surface:#F2F3F7;
+    --ink:#171821; --ink-strong:#07082E; --rule:#DBDCE5;
+    --a:#0F5FA6; --b:#7C2D8F; --c:#0F766E;
+    --pick:#15803D; --pick-bg:#EAF6EE; --warn:#B0102F; --warn-bg:#FBEFF1;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
-      --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF; --rule:#343878;
+      --royal:#A7ABFF; --navy:#0A0B33; --mid:#8B91FF;
+      --paper:#0E0F16; --card:#171923; --surface:#1E2030;
+      --ink:#E9EAF2; --ink-strong:#FFFFFF; --rule:#32344A;
+      --a:#7DC4F5; --b:#E9A8F5; --c:#5EEAD4;
+      --pick:#6EE7A0; --pick-bg:#13301F; --warn:#FF8FA3; --warn-bg:#331018;
     }
   }
   :root[data-theme="dark"] {
-    --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
-    --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF; --rule:#343878;
+    --royal:#A7ABFF; --navy:#0A0B33; --mid:#8B91FF;
+    --paper:#0E0F16; --card:#171923; --surface:#1E2030;
+    --ink:#E9EAF2; --ink-strong:#FFFFFF; --rule:#32344A;
+    --a:#7DC4F5; --b:#E9A8F5; --c:#5EEAD4;
+    --pick:#6EE7A0; --pick-bg:#13301F; --warn:#FF8FA3; --warn-bg:#331018;
   }
   * { box-sizing:border-box; }
   html { color-scheme:light dark; }
   body { background:var(--paper); color:var(--ink); font-family:'Lato',-apple-system,BlinkMacSystemFont,sans-serif; font-size:16px; line-height:1.6; margin:0; }
-  .wrap { max-width:760px; margin:0 auto; padding-left:20px; padding-right:20px; padding-block:48px 64px; }
-  h1,h2,h3,.eyebrow,.tag { font-family:'Figtree',-apple-system,sans-serif; }
+  .wrap { max-width:1080px; margin:0 auto; padding-left:20px; padding-right:20px; padding-block:40px 64px; }
+  h1,h2,h3,.eyebrow,.opt,.lab { font-family:'Figtree',-apple-system,sans-serif; }
   .eyebrow { font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--royal); margin:0 0 10px; }
-  h1 { font-size:clamp(32px,6vw,46px); font-weight:800; line-height:1.04; letter-spacing:-.02em; color:var(--ink-strong); margin:0 0 14px; text-wrap:balance; }
-  .standfirst { font-size:18px; max-width:54ch; margin:0 0 32px; }
-  .notice { border-left:4px solid var(--royal); background:var(--tint); padding:14px 16px; margin:0 0 36px; font-size:14.5px; }
-  .notice strong { color:var(--ink-strong); }
-  .notice p { margin:0; max-width:60ch; }
-  h2 { font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--royal); margin:34px 0 12px; border-top:2px solid var(--royal); padding-top:14px; }
-  .docs { list-style:none; padding:0; margin:0; display:grid; gap:12px; }
-  .docs a {
-    display:block; background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--royal);
-    padding:17px 19px; text-decoration:none; color:inherit; transition:border-color .12s ease, transform .12s ease;
-  }
-  .docs a:hover, .docs a:focus-visible { border-left-color:var(--mid); transform:translateX(2px); }
-  .docs a:focus-visible { outline:2px solid var(--mid); outline-offset:2px; }
-  .docs h3 { font-size:19px; font-weight:800; color:var(--ink-strong); margin:0 0 4px; letter-spacing:-.01em; }
-  .docs p { font-size:14.5px; margin:0; max-width:58ch; }
-  footer { border-top:1px solid var(--rule); margin-top:44px; padding-top:16px; font-size:13px; color:var(--mid); font-weight:700; }
-  @media (prefers-reduced-motion: reduce) { .docs a { transition:none; } .docs a:hover { transform:none; } }
+  h1 { font-size:clamp(30px,5.2vw,42px); font-weight:800; line-height:1.06; letter-spacing:-.02em; color:var(--ink-strong); margin:0 0 14px; text-wrap:balance; }
+  .standfirst { font-size:17.5px; max-width:60ch; margin:0 0 24px; }
+  .meta { display:flex; flex-wrap:wrap; gap:0 26px; border-top:2px solid var(--royal); border-bottom:1px solid var(--rule); padding-block:13px; margin-bottom:34px; }
+  .meta div { padding-block:4px; }
+  .meta dt { font-size:10.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--royal); margin:0 0 2px; font-family:'Figtree',sans-serif; }
+  .meta dd { margin:0; font-weight:700; color:var(--ink-strong); font-size:15px; }
+  section { margin-bottom:40px; }
+  h2 { font-size:20px; font-weight:800; color:var(--ink-strong); margin:0 0 14px; border-top:2px solid var(--royal); padding-top:14px; }
+  p { margin:0 0 14px; max-width:66ch; }
+  ul { margin:0 0 14px; padding-left:20px; }
+  li { margin-bottom:6px; max-width:64ch; }
+
+  .note { border-left:3px solid var(--royal); background:var(--surface); padding:14px 16px; margin:0 0 18px; font-size:14.5px; }
+  .note p { margin:0; max-width:64ch; font-size:14.5px; }
+  .note strong { color:var(--ink-strong); }
+  .note.pickme { border-left-color:var(--pick); background:var(--pick-bg); }
+  .note.warn { border-left-color:var(--warn); background:var(--warn-bg); }
+
+  .frame { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:10px; }
+  .frame li { background:var(--card); border:1px solid var(--rule); margin:0; max-width:none; padding:13px 15px; }
+  .frame b { font-family:'Figtree',sans-serif; font-size:13.5px; color:var(--ink-strong); display:block; margin-bottom:3px; }
+  .frame span { font-size:14px; }
+
+  .hint { display:none; font-size:13px; color:var(--mid); font-weight:700; margin:0 0 8px; }
+  .scroller { overflow-x:auto; margin-bottom:16px; border:1px solid var(--rule); }
+  table { border-collapse:collapse; width:100%; min-width:920px; font-size:14.5px; background:var(--card); }
+  th,td { text-align:left; padding:13px 14px; border-bottom:1px solid var(--rule); border-right:1px solid var(--rule); vertical-align:top; }
+  th:last-child,td:last-child { border-right:none; }
+  thead th { font-family:'Figtree',sans-serif; border-bottom:2px solid var(--royal); vertical-align:bottom; background:var(--surface); }
+  th.rowlab, td.rowlab { width:128px; font-family:'Figtree',sans-serif; font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--royal); background:var(--surface); }
+  .opt { display:block; font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; margin-bottom:5px; }
+  th.oa .opt { color:var(--a); } th.ob .opt { color:var(--b); } th.oc .opt { color:var(--c); }
+  th.oa { border-top:4px solid var(--a); } th.ob { border-top:4px solid var(--b); } th.oc { border-top:4px solid var(--c); }
+  thead th h3 { margin:0; font-size:17px; font-weight:800; color:var(--ink-strong); line-height:1.22; }
+  tr.sep td, tr.sep th { border-top:2px solid var(--royal); }
+  .yes { color:var(--pick); font-weight:700; }
+  @media (max-width:760px) { .hint { display:block; } }
+
+  .dec { list-style:none; padding:0; margin:0; }
+  .dec li { border-bottom:1px solid var(--rule); padding-block:14px; max-width:none; margin:0; }
+  .dec li:first-child { border-top:1px solid var(--rule); }
+  .dec b { font-family:'Figtree',sans-serif; font-size:16.5px; color:var(--ink-strong); display:block; margin-bottom:4px; }
+  .dec span { font-size:15px; max-width:64ch; display:block; }
+
+  .more { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+  .more a { display:block; background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--royal); padding:15px 17px; text-decoration:none; color:inherit; }
+  .more a:hover, .more a:focus-visible { border-left-color:var(--mid); }
+  .more a:focus-visible { outline:2px solid var(--mid); outline-offset:2px; }
+  .more h3 { font-family:'Figtree',sans-serif; font-size:16.5px; font-weight:800; color:var(--ink-strong); margin:0 0 3px; }
+  .more p { font-size:14px; margin:0; max-width:none; }
+
+  footer { border-top:1px solid var(--rule); margin-top:40px; padding-top:16px; font-size:13px; color:var(--mid); font-weight:700; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <p class="eyebrow">Alaya Property</p>
-  <h1>October webinar hub</h1>
-  <p class="standfirst">Everything for the 27 October session in one place. Session on Tuesday 27 October, 5pm AEST. Ads live Saturday 10 October.</p>
+  <p class="eyebrow">Alaya Property &middot; For Adi and Redom</p>
+  <h1>27 October: 3 structures to pick from</h1>
+  <p class="standfirst">Same running order in all 3, same offer, same length. What changes is the middle 30 minutes and what the ads get to promise. Option A is the one we have been working to.</p>
 
-  <div class="notice">
-    <p><strong>Internal only.</strong> These pages contain pricing decisions, campaign budgets and internal notes. Do not share the link outside Alaya and Flint.</p>
-  </div>
+  <dl class="meta">
+    <div><dt>Date</dt><dd>Tue 27 Oct, 5pm</dd></div>
+    <div><dt>Hosts</dt><dd>Adi and Redom</dd></div>
+    <div><dt>Ads live</dt><dd>Sat 10 Oct</dd></div>
+    <div><dt>Target</dt><dd>250 registrations</dd></div>
+  </dl>
 
-  <h2>Start here</h2>
-  <ul class="docs">
-    <li><a href="structures.html">
-      <h3>The 3 structures</h3>
-      <p>Three options for the 60 minutes, side by side, with what each needs from Adi and Redom and what still has to be decided.</p>
-    </a></li>
-  </ul>
+  <section>
+    <h2>On repeating September</h2>
+    <p>Worth saying up front, because it will come up. Some overlap with 15 September is fine and probably unavoidable.</p>
+    <ul>
+      <li>27 October runs on paid ads to a cold audience. Almost nobody in that room saw September.</li>
+      <li>September was a Q and A, so the content was reactive and scattered. There was no structured teach to repeat.</li>
+      <li>The parts worth reusing are the parts that landed. The budget explainer, the new build argument and the market spread all got good engagement.</li>
+    </ul>
+    <p>The only thing to actively avoid is running the same session for the database, who did attend. The fix is in how we brief the emails, not in throwing out the content.</p>
+  </section>
 
-  <h2>Campaign</h2>
-  <ul class="docs">
-    <li><a href="email-sequence.html">
-      <h3>Email sequence</h3>
-      <p>Sixteen emails written in full. Eight before the session, then two follow-up branches for attendees and no-shows.</p>
-    </a></li>
-    <li><a href="story-bank.html">
-      <h3>Story bank</h3>
-      <p>Real client results, founder material and 2027 modelling, each with its source and whether it has been sent before.</p>
-    </a></li>
-    <li><a href="ads-brief.html">
-      <h3>Ads planning brief</h3>
-      <p>Timeline, budget questions and the paid versus free decision. Written for the agency call.</p>
-    </a></li>
-  </ul>
+  <section>
+    <h2>The frame, identical in all 3</h2>
+    <p>These 5 pieces do not change whichever option we pick. They are the mechanics rather than the content.</p>
+    <ul class="frame">
+      <li><b>Open, 5 min</b><span>Show the whole Alaya model, then say we are doing 1 layer of it tonight.</span></li>
+      <li><b>Offer mentioned, min 3</b><span>One line, then invite people to type a keyword in the chat if they want the detail.</span></li>
+      <li><b>The middle, 30 min</b><span>This is what changes. See the table.</span></li>
+      <li><b>Roadblock, 3 min</b><span>Ask the room to type the top 3 things that will stop them doing this.</span></li>
+      <li><b>Invite, then open Q and A</b><span>Short invitation, then Q and A with no hard finish. September proved that is where the energy is.</span></li>
+    </ul>
+  </section>
 
-  <h2>Reference</h2>
-  <ul class="docs">
-    <li><a href="workshop-playbook.html">
-      <h3>Workshop playbook</h3>
-      <p>How to build a session that sells without a pitch, and where our current plan falls short of it.</p>
-    </a></li>
-  </ul>
+  <section>
+    <h2>The 3 options</h2>
+    <p class="hint">Scroll the table sideways to compare all 3.</p>
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr>
+            <th class="rowlab"></th>
+            <th class="oa"><span class="opt">Option A</span><h3>Buy now or wait: the decision framework</h3></th>
+            <th class="ob"><span class="opt">Option B</span><h3>The 2027 numbers, live</h3></th>
+            <th class="oc"><span class="opt">Option C</span><h3>Where the money goes to 2046</h3></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rowlab">The promise</td>
+            <td>A framework for deciding whether to buy or wait, including who should wait.</td>
+            <td>The exact point where the new rules stop costing you and start helping you.</td>
+            <td>If the rules now reward holding longer, which markets still work in 10 and 20 years.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">What the ad sells</td>
+            <td>The decision itself. Widest possible audience.</td>
+            <td>A specific number and a live model.</td>
+            <td>A forward-looking call nobody else is making.</td>
+          </tr>
+          <tr class="sep">
+            <td class="rowlab">Middle, part 1</td>
+            <td>What changed, quickly. The rules and the 12 May cut-off.</td>
+            <td>The rules in 8 minutes, then the base case on screen.</td>
+            <td>The rules changed the clock, not the case for owning property.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Middle, part 2</td>
+            <td>The framework. How we assess price, cash flow, growth assumptions and risk across property types and locations.</td>
+            <td>The growth-rate flip, live. At 4% to 5% the new rules leave you better off. At 7% to 8% they cost.</td>
+            <td>Where the money goes. GDP composition, which sectors grow, which places are geared to them.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Middle, part 3</td>
+            <td>Two worked examples showing how the numbers change the decision.</td>
+            <td>The new build carve-out. $73,931 of benefit against a 0.3% break-even, and $109,435 behind at 1.5%.</td>
+            <td>The threads. Data centres, agricultural exports, lifestyle markets, population.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">The proof moment</td>
+            <td>A decision checklist they take away and can actually use.</td>
+            <td>Moving the growth dial live and letting the room watch the answer change.</td>
+            <td>Naming specific markets and showing the reasoning behind each.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Then, all 3</td>
+            <td colspan="3">How we pick one, on 1 real property. Screen-share the 3 client documents: where to buy, what it is worth, whether to buy it.</td>
+          </tr>
+          <tr class="sep">
+            <td class="rowlab">Overlap with Sep</td>
+            <td>Moderate. September touched the rules and the new build question in the Q and A.</td>
+            <td>Moderate. Adi made the new build argument in September, just without the numbers.</td>
+            <td><span class="yes">Lowest.</span> Redom promised this at the end of September and it has not been delivered.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Needs from Redom</td>
+            <td>The rules segment. Already written.</td>
+            <td>Nothing new. He has all of it.</td>
+            <td>Real research time. This is the constraint.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Needs from Adi</td>
+            <td>The framework itself, which does not exist yet in a teachable form.</td>
+            <td>The calculator demo rehearsed so it does not stall on air.</td>
+            <td>The method segment, same as the others.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">The risk</td>
+            <td>The promise is general, so the ad has no sharp hook. Every buyer's agent runs a version of this.</td>
+            <td>It is a tax session. Strong for people who already own, weaker for people who have not bought yet.</td>
+            <td>Highest delivery risk. If the research is not ready by 27 October the session has no centre.</td>
+          </tr>
+          <tr>
+            <td class="rowlab">Best for</td>
+            <td>Volume. The broadest registration numbers.</td>
+            <td>Qualified registrations. Fewer people, further along.</td>
+            <td>Positioning. The session people talk about afterwards.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note pickme">
+      <p><strong>If it helps, my order is A, then C, then B.</strong> A is the safest and it is what the campaign was built around, so nothing has to be rebuilt. C is the strongest if Redom can get the research up in time, and it is the only one that is genuinely new. B works best as segments inside either of the others rather than as the whole session, because the numbers are the proof, not the promise.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we need to decide</h2>
+    <ul class="dec">
+      <li><b>Which of the 3, or a mix?</b><span>A and C combine reasonably well. A as the promise, with C's forward-looking piece as the second worked example.</span></li>
+      <li><b>Is the offer the education package or the strategy session?</b><span>Both currently sit at about $3,000 for the same buyer. Recommend 1 on the night, the strategy session, with the education package appearing only in the follow-up emails. It has to become 1 sentence before the landing page can be written.</span></li>
+      <li><b>Calculator live or pre-recorded?</b><span>Live is stronger, pre-recorded removes the risk of it stalling. Changes the filming schedule either way.</span></li>
+      <li><b>Who takes the third seat?</b><span>Runs chat, feeds questions, logs every one. We did not capture the September questions and they are the best input we have for the follow-up emails.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Rules for anything on screen</h2>
+    <ul>
+      <li>Suburb and state only. No client names, and the market shortlist page has one in its header that needs stripping.</li>
+      <li>Say out loud which figures are bank valuations and which are estimates.</li>
+      <li>We hold no AFSL and are not a registered tax agent. Explain the law, show the arithmetic, stop there.</li>
+      <li>Never use a buy before July 2027 framing, in the session or the ads. The grandfathering cut-off was 12 May 2026.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The rest of the campaign material</h2>
+    <p>Not needed for the call. Here if you want the detail behind any of it.</p>
+    <ul class="more">
+      <li><a href="email-sequence.html"><h3>Email sequence</h3><p>16 emails written in full, 8 before the session and 2 follow-up branches.</p></a></li>
+      <li><a href="story-bank.html"><h3>Story bank</h3><p>Real client results and founder material, with sources and what has been sent before.</p></a></li>
+      <li><a href="ads-brief.html"><h3>Ads planning brief</h3><p>Timeline, budget questions and the paid versus free decision.</p></a></li>
+      <li><a href="workshop-playbook.html"><h3>Workshop playbook</h3><p>How to build a session that sells without a pitch.</p></a></li>
+    </ul>
+    <div class="note warn">
+      <p><strong>Internal only.</strong> These pages carry pricing decisions and campaign budgets. Please do not forward the link outside Alaya and Flint.</p>
+    </div>
+  </section>
 
   <footer>Alaya Property &middot; Internal use only</footer>
 
