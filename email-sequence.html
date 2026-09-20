@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>October Webinar Email Sequence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  :root {
+    --royal:#1A1C8F; --navy:#0D0E5C; --mid:#2428B8; --tint:#E8E9F8;
+    --paper:#FAFAFD; --card:#FFFFFF; --ink:#0D0E5C; --ink-strong:#07082E;
+    --rule:#C9CBEC; --fresh:#15803D; --fresh-bg:#E4F4EA;
+    --near:#B45309; --near-bg:#FBEEDC; --risk:#B0102F; --risk-bg:#FBE4E8;
+    --adi:#7C2D8F; --adi-bg:#F4E4F8; --redom:#0F766E; --redom-bg:#DEF2F0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
+      --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF;
+      --rule:#343878; --fresh:#6EE7A0; --fresh-bg:#12331F;
+      --near:#FBBF5C; --near-bg:#3A2A10; --risk:#FF8FA3; --risk-bg:#3D1220;
+      --adi:#E9A8F5; --adi-bg:#3A1442; --redom:#5EEAD4; --redom-bg:#0C3733;
+    }
+  }
+  :root[data-theme="dark"] {
+    --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
+    --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF;
+    --rule:#343878; --fresh:#6EE7A0; --fresh-bg:#12331F;
+    --near:#FBBF5C; --near-bg:#3A2A10; --risk:#FF8FA3; --risk-bg:#3D1220;
+    --adi:#E9A8F5; --adi-bg:#3A1442; --redom:#5EEAD4; --redom-bg:#0C3733;
+  }
+  * { box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:'Lato',-apple-system,sans-serif; font-size:15.5px; line-height:1.62; margin:0; }
+  .wrap { max-width:940px; margin:0 auto; padding-left:20px; padding-right:20px; padding-block:32px 64px; }
+  h1,h2,h3,.eyebrow,.tag,.num,.chip,.label { font-family:'Figtree',-apple-system,sans-serif; }
+  .eyebrow { font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--royal); margin:0 0 10px; }
+  h1 { font-size:clamp(30px,5.4vw,44px); font-weight:800; line-height:1.06; letter-spacing:-.02em; color:var(--ink-strong); margin:0 0 16px; text-wrap:balance; }
+  .standfirst { font-size:18px; max-width:64ch; margin:0 0 28px; }
+  .meta { display:flex; flex-wrap:wrap; gap:0 28px; border-top:2px solid var(--royal); border-bottom:1px solid var(--rule); padding-block:14px; margin-bottom:38px; }
+  .meta div { padding-block:4px; }
+  .meta dt { font-family:'Figtree',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--royal); margin:0 0 2px; }
+  .meta dd { margin:0; font-weight:700; color:var(--ink-strong); font-size:15px; }
+  section { margin-bottom:44px; }
+  h2 { font-size:21px; font-weight:800; color:var(--ink-strong); margin:0 0 4px; display:flex; align-items:baseline; gap:12px; border-top:2px solid var(--royal); padding-top:16px; }
+  h2 .num { font-size:13px; font-weight:800; color:var(--royal); font-variant-numeric:tabular-nums; flex:none; }
+  .sub { margin:0 0 22px; padding-left:33px; font-size:14.5px; color:var(--mid); font-weight:700; max-width:64ch; }
+  .body { padding-left:33px; }
+  @media (max-width:600px){ .sub,.body{ padding-left:0; } }
+  p { margin:0 0 14px; max-width:68ch; }
+  ul { margin:0 0 14px; padding-left:20px; }
+  li { margin-bottom:7px; max-width:66ch; }
+
+  .email { border:1px solid var(--rule); border-top:3px solid var(--royal); background:var(--card); padding:20px 22px; margin-bottom:22px; }
+  .email-head { display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px; margin-bottom:14px; }
+  .chip { font-size:10.5px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; padding:4px 9px; }
+  .c-when { background:var(--tint); color:var(--royal); }
+  .c-adi { background:var(--adi-bg); color:var(--adi); }
+  .c-redom { background:var(--redom-bg); color:var(--redom); }
+  .tag { display:inline-block; font-size:10px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; padding:3px 8px; border-radius:3px; }
+  .t-fresh { background:var(--fresh-bg); color:var(--fresh); }
+  .t-near { background:var(--near-bg); color:var(--near); }
+  .line { display:grid; grid-template-columns:76px 1fr; gap:14px; padding-block:6px; border-top:1px solid var(--rule); align-items:baseline; }
+  .label { font-size:10.5px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; color:var(--mid); }
+  .line .v { font-size:15px; }
+  .line .v.subject { font-family:'Figtree',sans-serif; font-weight:800; color:var(--ink-strong); font-size:17px; }
+  .line .v.alt { font-size:14px; }
+  @media (max-width:560px){ .line{ grid-template-columns:1fr; gap:1px; } }
+  .copy { margin-top:14px; padding-top:14px; border-top:1px solid var(--rule); }
+  .copy p { font-size:15.5px; margin-bottom:13px; max-width:58ch; }
+  .copy ul { margin-bottom:13px; }
+  .copy li { font-size:15px; max-width:56ch; }
+  .cta { display:inline-block; background:var(--royal); color:#FFFFFF; font-family:'Figtree',sans-serif; font-weight:800; font-size:14px; padding:10px 18px; margin-bottom:13px; }
+  :root[data-theme="dark"] .cta, :root:not([data-theme="light"]) .cta { color:#07082A; }
+  @media (prefers-color-scheme: light) { .cta { color:#FFFFFF; } }
+  .note { margin-top:12px; padding:11px 14px; background:var(--tint); font-size:13.5px; }
+  .note strong { color:var(--ink-strong); }
+  .note p { margin-bottom:0; max-width:64ch; font-size:13.5px; }
+  .callout { border-left:4px solid var(--royal); background:var(--tint); padding:16px 18px; margin:0 0 20px; }
+  .callout p:last-child { margin-bottom:0; }
+  .callout strong { color:var(--ink-strong); }
+  .scroller { overflow-x:auto; margin-bottom:18px; }
+  table { border-collapse:collapse; width:100%; min-width:600px; font-size:14px; }
+  th,td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-family:'Figtree',sans-serif; font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--royal); background:var(--tint); border-bottom:2px solid var(--royal); }
+  td.lead { font-family:'Figtree',sans-serif; font-weight:700; color:var(--ink-strong); }
+  footer { border-top:2px solid var(--royal); padding-top:16px; font-size:13px; color:var(--mid); font-weight:700; }
+</style>
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<p style="font-family:Figtree,sans-serif;font-size:13px;font-weight:700;max-width:960px;margin:0 auto;padding:14px 20px 0"><a href="index.html" style="color:#2428B8">&larr; All documents</a></p>
+<div class="wrap">
+
+  <p class="eyebrow">Alaya Property &middot; October webinar campaign</p>
+  <h1>Buy now or wait: the email sequence</h1>
+  <p class="standfirst">16 emails, written in full. Every story here has never been sent to the list, so the sequence does not repeat a single EDM from June to September. Works for the database and for paid-ads registrations without splitting into 2 tracks.</p>
+
+  <dl class="meta">
+    <div><dt>Ads live</dt><dd>Sat 10 Oct</dd></div>
+    <div><dt>Webinar</dt><dd>Tue 27 Oct, 5pm AEST</dd></div>
+    <div><dt>Pre-send</dt><dd>8 emails</dd></div>
+    <div><dt>Follow up</dt><dd>2 branches, 4 each</dd></div>
+  </dl>
+
+  <section>
+    <h2><span class="num">00</span>Why these stories and not the usual ones</h2>
+    <div class="body">
+      <p>The list has had a client result roughly every week since June. The nurse story went out on 11 September and the Darwin story on 18 September, so both are burnt for this audience. Everything below is drawn from material that has only ever lived in video scripts, carousels, reels captions or the Playbook PDF.</p>
+      <div class="callout">
+        <p><strong>One spine, 8 angles.</strong> The deadline everybody is being sold expired on 12 May 2026, so the question stopped being when you buy and became what you buy. Each email attacks that from a different side.</p>
+      </div>
+      <p>Two operational notes before this goes into GoHighLevel. Pause the regular weekly client story EDM for the 17 days this runs, otherwise the same person gets 2 Alaya emails in a week. And the rejection email built in August, the one saved as what-rejection-looks-like, needs checking before email 5 goes out, because it may already have shipped and I could not confirm either way.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span>Before the session</h2>
+    <p class="sub">8 sends over 17 days. Belief breaks first, evidence follows, logistics last.</p>
+    <div class="body">
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">1 &middot; Sat 10 Oct</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">I lost money on my first property</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">The $213,000 that built this business</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">And it is the reason Alaya exists at all.</span></div>
+        <div class="copy">
+          <p>I was 23 when I sat down to sign for a house in Traralgon. $213,000. My hand was actually shaking as I signed, and that number is still seared into my brain.</p>
+          <p>I sold it 2 years later for $215,000. Once you count what it cost to buy, to hold and to sell, I broke even at best. Realistically I lost money.</p>
+          <p>The deposit had taken me nearly 5 years to save, working more than 1 job for most of it, and I will be honest with you, the saving part felt humiliating. So to come out the other side with nothing to show was not a great feeling.</p>
+          <p>Here is what I got wrong, and it was not the timing. I bought in a year that turned out fine for Australian property. What I did not have was a reason. There was no strategy attached to that purchase, I just wanted to be someone who owned a property.</p>
+          <p>That lesson is the whole reason this business exists, and it is why on 27 October we are running an hour on what the 2027 rules actually reward, rather than on whether now is a good time to buy.</p>
+          <a class="cta">Save my seat</a>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> earns the right to be listened to for the next 16 days by opening on a failure. Also quietly reframes the whole campaign away from timing and toward selection, which is the webinar's argument.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">2 &middot; Tue 13 Oct</span><span class="chip c-redom">Redom</span><span class="tag t-near">Adjacent to 8 Sep</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">The deadline you are being sold expired in May</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">There is nothing left to beat</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">Grandfathering closed on budget night, not in July 2027.</span></div>
+        <div class="copy">
+          <p>You have probably seen the ads. Buy before July 2027 and keep your negative gearing. Act now, beat the deadline.</p>
+          <p>That door is already shut. Grandfathering closed at 7:30pm on budget night, 12 May 2026. Any property bought after that moment sits under the new rules from 1 July 2027, regardless of when you sign.</p>
+          <p>So if you buy tomorrow, you are already inside the new regime. There is nothing left to beat, and anyone telling you otherwise is selling you urgency they do not have.</p>
+          <p>There is a real date coming, it is just not the one being advertised. On 30 June 2027 every CGT asset is treated as sold and immediately reacquired. No tax is payable on the day, but it splits your gain into an old-rules slice and a new-rules slice, which means having evidence of what your property was worth on that date genuinely matters. That applies to grandfathered owners too.</p>
+          <p>We are walking through all of it on 27 October, including the part that decides which properties come out ahead.</p>
+          <a class="cta">Register for 27 October</a>
+          <p>Redom</p>
+          <p>General information only. Alaya Property is a licensed buyer's agency and does not provide credit, financial product or taxation advice.</p>
+        </div>
+        <div class="note"><p><strong>Watch:</strong> the 8 September email covered what 2027 does to a property. This one is a different claim, that the advertised deadline is fiction, and the deemed disposal mechanic has never been sent. Keep the framing on the fiction, not on a rules recap, or it will read as a repeat.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">3 &middot; Fri 16 Oct</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Playbook only</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">$73,931 says buy a new build</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">The carve-out that costs you $109,435</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">We ran it. The tax break loses.</span></div>
+        <div class="copy">
+          <p>New builds keep negative gearing under the new rules. Established properties do not. So every developer in the country is about to tell you the answer is obvious.</p>
+          <p>We modelled it properly, because the number does sound convincing at first. Over a 10 year hold, that carve-out is worth $73,931 in tax benefit against your wages.</p>
+          <p>Then you run the break-even, and this is the part nobody putting it in an ad wants you to see. The new build only has to grow 0.3% a year slower than the established property before the tax benefit is gone.</p>
+          <p>0.3%. That is the entire margin.</p>
+          <p>At a 0.5% gap the new build finishes $24,006 behind. At 1.5%, which is what we use to account for builder margin and the new-build premium, it finishes $109,435 behind. That is 30% of the whole result, handed over in exchange for a deduction.</p>
+          <p>I am not saying never buy a new build. I am saying the tax break is not the reason to, and on 27 October we are putting the model on screen so you can watch the numbers move yourself.</p>
+          <a class="cta">Save my seat</a>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> gives the session a specific promise rather than a framework. This is the strongest unused asset in the whole archive, and it has only ever been inside the Playbook PDF that went to the 15 September attendees.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">4 &middot; Mon 19 Oct</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">He bought after 13 straight rate rises</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">Everyone told him he was an idiot</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">The bank valued it 2 years later. Here is the number.</span></div>
+        <div class="copy">
+          <p>One of my earliest clients bought his first investment property in June 2024, in Bundaberg, for $720,000. He did it after 13 consecutive rate rises, with every single person in his life telling him he was making a mistake.</p>
+          <p>An independent bank valuation about 2 years later came back at $989,000.</p>
+          <p>I want to be careful here, because the easy version of this story is that he was brave and everyone else was wrong. That is not the lesson and it is not how we work.</p>
+          <p>He did not bet on rates. He bought in a market where the population was growing, the job market was holding and there were not enough homes for the people already there. Those things were true whether the cash rate went up again or not, which is exactly why the noise around him did not change the decision.</p>
+          <p>Rates move the mood. They rarely move the fundamentals underneath a specific market, and on 27 October we are showing you how we tell the difference.</p>
+          <a class="cta">Register for 27 October</a>
+          <p>Adi</p>
+          <p>Past performance is not a reliable indicator of future results.</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> kills the "surely now is a bad time" stall, which the sales team reports as the most common reason a qualified lead goes quiet. This one is a bank valuation rather than an estimate, so it can be stated plainly.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">5 &middot; Thu 22 Oct</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">34 checks passed. We still walked away.</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">The 38 metres that killed a good apartment</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">What our due diligence actually looks like when it fails.</span></div>
+        <div class="copy">
+          <p>We run 49 checks on every apartment before anyone signs anything. On a property we looked at in Caulfield, 34 came back clear, 12 needed a document or a specialist, and 3 came back below our standard.</p>
+          <p>Those 3 were not 3 problems. They were the same problem counted 3 ways, and the problem was the road.</p>
+          <p>The building did everything it could with the position it had. Only 14 apartments, built in 2014, entrance around the corner on the quiet street, and the unit itself on the top floor facing away from the traffic. If you were going to buy on a main road, this was close to the best version of it.</p>
+          <p>It still did not clear, and the reason has almost nothing to do with noise. You can adapt to noise. What you cannot adapt to is the day you sell, when every buyer who inspects your apartment stands on that same footpath and a meaningful share of them quietly rule it out before they walk in.</p>
+          <p>Here is the number that proves it. The same layout in that same building took 41 days to sell in 2019. In 2026 it took 203.</p>
+          <p>You can renovate a kitchen. You cannot move a road. Most of what we actually get paid for is the properties we talk clients out of, and on 27 October we will show you the checklist we use.</p>
+          <a class="cta">Save my seat</a>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> answers the trust objection the sales team says is now the biggest headwind after other agencies collapsed. Also the natural bridge into the education pack, because this is one of the 3 assets inside it.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">6 &middot; Sat 24 Oct</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">The 2 years after the no</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">The people who turned us down</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">The no was never the expensive part.</span></div>
+        <div class="copy">
+          <p>Plenty of people have sat through a call with us and decided not to go ahead. That is completely fine, and it should be, because we are not the right answer for everyone.</p>
+          <p>What I did not expect is how many of them come back around. At least 10 or 15 have turned up again through a referral or a message, sometimes a year or 2 later.</p>
+          <p>And most of them still have not done anything. Not with us, not with anyone, not on their own. They are sitting in the same spot they were in when we first spoke, waiting on something they have no control over.</p>
+          <p>When somebody turns us down I genuinely do not think they are rejecting Alaya, or the research, or even the fee, which is usually the thing that gets said out loud. I think they are rejecting a stepping stone, because taking it makes the whole thing real.</p>
+          <p>The no was never the expensive bit. The 2 years that followed it were.</p>
+          <p>On 27 October we are spending an hour on what the new rules actually reward. It is free, and if you come away deciding we are not for you, that is a perfectly good outcome. Deciding nothing for another year is the one that costs.</p>
+          <a class="cta">Register for 27 October</a>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> cost of inaction without a single price or a countdown. The strongest argument of its kind in the archive and it has only ever run as a reel.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">7 &middot; Mon 26 Oct</span><span class="chip c-redom">Redom</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">Tomorrow: the chart that decides what you buy</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">The reform is not what you think it is</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">At 4% growth you win. At 8% you lose. Here is why.</span></div>
+        <div class="copy">
+          <p>Most of the coverage of the 2027 changes has treated them as a flat hit to property investors. It is not that, and the difference matters enormously for what you should be buying.</p>
+          <p>The reform is a tax on nominal capital growth. That single sentence is the whole finding.</p>
+          <p>Run our base case and it comes out like this. An $800,000 purchase, $600 a week in rent, 80% lending at 6.2%, a 37% marginal rate, held 10 years. Under the old rules the net result is $380,209. Under the new rules it is $364,590. The change costs $15,618, or 4.1%. Considerably less than the headlines suggest.</p>
+          <p>But hold that same property at 4% to 5% annual growth and the new rules leave you better off than the old ones did. Hold it at 7% to 8% and they cost you real money. Hold it for 30 years and the gap reaches $307,698.</p>
+          <p>So the rules did not make property worse. They changed which property works, and that is a completely different problem to solve.</p>
+          <p>Tomorrow, 5pm AEST, Adi and I are putting the model on screen and moving the dial live.</p>
+          <a class="cta">Get my seat</a>
+          <p>Redom</p>
+          <p>General information only. Alaya Property is not a registered tax agent.</p>
+        </div>
+        <div class="note"><p><strong>Job:</strong> a reminder that is worth opening even if the reader never attends. The finding is stated in full, so the email delivers on its own.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">8 &middot; Tue 27 Oct, 9am</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Logistics</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">Tonight at 5</span></div>
+        <div class="line"><span class="label">Alt</span><span class="v alt">One hour, and there is still room</span></div>
+        <div class="line"><span class="label">Preview</span><span class="v alt">Your link is below. Nothing to install.</span></div>
+        <div class="copy">
+          <p>Tonight, 5pm AEST, one hour with Redom and me on what the 2027 rules actually reward.</p>
+          <p>If you are already registered your link is sitting in your inbox. If you are not, there is still time.</p>
+          <ul>
+            <li>Starts 5pm AEST, runs 1 hour</li>
+            <li>Online, free, nothing to download or install</li>
+            <li>Register and the join link reaches you straight away</li>
+            <li>Stay to the end and the decision sheet is yours</li>
+          </ul>
+          <p>Redom takes the rules and the funding side. I take what it means for what you buy. See you at 5.</p>
+          <a class="cta">Get my seat</a>
+          <p>Adi</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Branch A: attended</h2>
+    <p class="sub">They have heard the argument. Do not re-explain it, extend it.</p>
+    <div class="body">
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">A1 &middot; Plus 2 hours</span><span class="chip c-adi">Adi</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">As promised. Thanks for giving us the hour.</span></div>
+        <div class="copy">
+          <p>Thanks for turning up tonight and for the questions, some of them were better than the material.</p>
+          <p>Your decision sheet is attached, and the replay is here if you want to run the model again at your own pace.</p>
+          <p>Two things exist if you want to go further, and they are genuinely for different people.</p>
+          <ul>
+            <li>If you would rather run this yourself, or you are buying somewhere we do not operate, the education pack gives you the 3 documents we walked through tonight, in full, on real properties.</li>
+            <li>If you would rather we did it with you, the strategy session is the starting point, and what you pay for it comes off the full service in its entirety.</li>
+          </ul>
+          <p>No rush on either. Have a read of the sheet first.</p>
+          <a class="cta">Watch the replay</a>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Blocked:</strong> names and prices for both doors have to be settled before this can ship.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">A2 &middot; Plus 1 day</span><span class="chip c-adi">Adi</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">The question I did not answer properly last night</span></div>
+        <div class="copy">
+          <p>One question came up more than any other last night and I gave it about 40 seconds, which it did not deserve. So here is the proper version.</p>
+          <p>[Insert the most-asked question from the Q and A, answered at length. Assign someone to log every question verbatim in chat on the night, because this email cannot be written in advance and the same thing was missed after the September session.]</p>
+          <p>If it raises another one, just reply to this. I read them.</p>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Template, not copy.</strong> This is the highest-performing email in the branch and it can only be written after the session runs.</p></div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">A3 &middot; Plus 3 days</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">$100,000 of equity before the keys changed hands</span></div>
+        <div class="copy">
+          <p>On the night I said the price you pay is the only part of a purchase you fully control. Here is what that looks like when it goes right.</p>
+          <p>A client came to us in 2025 with a $400,000 budget for regional Victoria. We bought in Hamilton for $370,000. The bank valuation, on the day of purchase, came back at $470,000.</p>
+          <p>That is $100,000 of equity before anybody had picked up a set of keys, and it is not a market story. The market did not move in a day. It is what happens when the price is the work rather than an afterthought.</p>
+          <p>Hamilton is not a headline market. Nobody is making content about Hamilton. The data said go there, and the data was right. He came back for a second one.</p>
+          <p>If that is the part you want help with, the strategy session is where it starts.</p>
+          <p>Adi</p>
+        </div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">A4 &middot; Plus 7 days</span><span class="chip c-adi">Adi</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">Who should not work with us</span></div>
+        <div class="copy">
+          <p>A week on from the session, and rather than chase you, I would rather be straight about who each option is actually for.</p>
+          <ul>
+            <li>Take the education pack if you want to run your own process, if you are buying in a market we do not cover, or if you simply enjoy this part and want to do it properly.</li>
+            <li>Take the strategy session if you want the work done with you, and you would rather spend the next 3 months on your actual job.</li>
+            <li>Take neither if you have not started a pre-approval, or if the person you make these decisions with has not been part of any of this. Sort that first. Everything else is easier afterwards.</li>
+          </ul>
+          <p>That third one is real advice, not a sales technique. Most of the stalls we see are not about money, they are about one of those 2 things.</p>
+          <p>Whenever you are ready.</p>
+          <p>Adi</p>
+        </div>
+        <div class="note"><p><strong>Why the third option matters:</strong> naming who should do nothing is what makes the other 2 credible. It also matches the 2 blockers the sales team reports most, which are pre-approval and partner alignment.</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Branch B: registered, did not attend</h2>
+    <p class="sub">They never heard the argument. Deliver it in the emails, and assume they will not watch the replay.</p>
+    <div class="body">
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">B1 &middot; Plus 2 hours</span><span class="chip c-redom">Redom</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">You missed it. Here is the finding.</span></div>
+        <div class="copy">
+          <p>You registered and could not make it, which is completely fine. Rather than just send you a link, here is the thing the hour turned on.</p>
+          <p>The 2027 reform is not a flat tax on property investors. It is a tax on nominal capital growth. Held at 4% to 5% annual growth the new rules leave you better off than the old ones. At 7% to 8% they cost real money.</p>
+          <p>Which means the rules changed which property works, not whether to buy one.</p>
+          <p>The replay is below, and the decision sheet is attached if you would rather read than watch.</p>
+          <a class="cta">Watch the replay</a>
+          <p>Redom</p>
+        </div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">B2 &middot; Plus 1 day</span><span class="chip c-adi">Adi</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">The tax break that costs $109,435</span></div>
+        <div class="copy">
+          <p>The second half of Tuesday's session was about the new build carve-out, and it is the part most worth your 2 minutes.</p>
+          <p>New builds keep negative gearing. That is worth $73,931 in tax benefit over a 10 year hold, which is why you are about to hear a great deal about new builds from people who sell them.</p>
+          <p>The break-even is a growth gap of 0.3% a year. At 0.5% the new build finishes $24,006 behind. At 1.5%, which is what we use for builder margin and the new-build premium, it finishes $109,435 behind. That is 30% of the entire result.</p>
+          <p>The deduction is real. It is just considerably smaller than the thing it costs you.</p>
+          <p>The replay has the full model if you want to watch the numbers move.</p>
+          <a class="cta">Watch the replay</a>
+          <p>Adi</p>
+        </div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">B3 &middot; Plus 3 days</span><span class="chip c-adi">Adi</span><span class="tag t-fresh">Never emailed</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">A 5.7% yield from day 1, on one title</span></div>
+        <div class="copy">
+          <p>With negative gearing quarantined on established property from 2027, the question a lot of people are quietly asking is how they are supposed to hold something that costs them money every month.</p>
+          <p>The honest answer is to buy something that does not.</p>
+          <p>In August 2025 we bought a client a 5 bedroom house in Hoppers Crossing with a pre-built 2 bedroom granny flat, both on the one title, for $815,000. It ran a 5.7% yield from day 1. An independent valuation 4 months later came back at $912,000.</p>
+          <p>He is planning 2 more.</p>
+          <p>Cash flow was always the unglamorous part of this. It is about to become the part that decides who can hold long enough for the growth to show up.</p>
+          <p>Adi</p>
+        </div>
+      </div>
+
+      <div class="email">
+        <div class="email-head"><span class="chip c-when">B4 &middot; Plus 7 days</span><span class="chip c-adi">Adi</span></div>
+        <div class="line"><span class="label">Subject</span><span class="v subject">Two doors, and permission to take neither</span></div>
+        <div class="copy">
+          <p>Last one on this, and then I will leave you alone.</p>
+          <ul>
+            <li>The education pack if you want to run your own process, or you are buying somewhere we do not operate.</li>
+            <li>The strategy session if you would rather we did it with you. What you pay comes off the full service entirely.</li>
+            <li>Neither, if pre-approval has not started or the person you decide these things with has not been part of the conversation. Fix that first.</li>
+          </ul>
+          <p>We run one of these sessions every month, so if this one was not the right moment, the next one is already in the calendar.</p>
+          <p>Adi</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Overlap check</h2>
+    <p class="sub">What every email in this sequence draws on, and where that material has appeared before.</p>
+    <div class="body">
+      <div class="scroller">
+        <table>
+          <thead><tr><th>Email</th><th>Source material</th><th>Previously published</th></tr></thead>
+          <tbody>
+            <tr><td class="lead">1. First property</td><td>Adi, Traralgon $213,000</td><td>Reels captions only</td></tr>
+            <tr><td class="lead">2. Deadline expired</td><td>Grandfathering, deemed disposal</td><td>2027 topic touched 8 Sep. This angle and the deemed disposal never sent</td></tr>
+            <tr><td class="lead">3. New build carve-out</td><td>$73,931 and $109,435</td><td>Playbook PDF, to 15 Sep attendees only</td></tr>
+            <tr><td class="lead">4. 13 rate rises</td><td>Bundaberg $720,000 to $989,000</td><td>VSL and carousel scripts only</td></tr>
+            <tr><td class="lead">5. 34 checks</td><td>Caulfield apartment, 49 point DD</td><td>Education asset only. Check the August rejection email first</td></tr>
+            <tr><td class="lead">6. The 2 years after</td><td>Prospects who said no</td><td>Reels only</td></tr>
+            <tr><td class="lead">7. The chart</td><td>Growth-rate finding, base case</td><td>Playbook PDF only</td></tr>
+            <tr><td class="lead">A3. $100,000 equity</td><td>Hamilton $370,000 to $470,000</td><td>VSL only</td></tr>
+            <tr><td class="lead">B3. 5.7% from day 1</td><td>Hoppers Crossing $815,000 to $912,000</td><td>Carousel only</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Deliberately left out, because the list received them between June and September: the nurse in regional Victoria, the Darwin purchase, Melton West, Gordonvale, Griffith, the Glen Huntly block, the build cost argument, the Brisbane comparison and the new parents in Pakenham.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Before it goes into GoHighLevel</h2>
+    <div class="body">
+      <ul>
+        <li>Pause the weekly client story EDM for the 17 days this runs.</li>
+        <li>Confirm whether the August rejection email shipped. If it did, swap email 5 for the Werribee bus stop rejection instead of the Caulfield apartment.</li>
+        <li>Lock the 2 door names and prices before A1, A4, B4 can ship. Nothing else in the sequence is blocked.</li>
+        <li>Assign someone to log every Q and A question verbatim on the night. A2 cannot be written without it.</li>
+        <li>Valuations stated as valuations, estimates stated as estimates. Every figure in this sequence is a bank or independent valuation except where the copy says otherwise.</li>
+        <li>No client names anywhere. Suburb and state only.</li>
+        <li>Standard Alaya footer on all 16, per the GHL email spec.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    October webinar campaign, drafted 20 September 2026. Internal use only.
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Workshops That Sell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  :root {
+    --royal:#1A1C8F; --navy:#0D0E5C; --mid:#2428B8; --tint:#E8E9F8;
+    --paper:#FAFAFD; --card:#FFFFFF; --ink:#0D0E5C; --ink-strong:#07082E;
+    --rule:#C9CBEC; --old:#B0102F; --old-bg:#FBE4E8; --new:#15803D; --new-bg:#E4F4EA;
+    --gap:#B45309; --gap-bg:#FBEEDC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
+      --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF;
+      --rule:#343878; --old:#FF8FA3; --old-bg:#3D1220; --new:#6EE7A0; --new-bg:#12331F;
+      --gap:#FBBF5C; --gap-bg:#3A2A10;
+    }
+  }
+  :root[data-theme="dark"] {
+    --royal:#9EA2FF; --navy:#0A0B33; --mid:#7C82FF; --tint:#191B52;
+    --paper:#07082A; --card:#101243; --ink:#EDEEFF; --ink-strong:#FFFFFF;
+    --rule:#343878; --old:#FF8FA3; --old-bg:#3D1220; --new:#6EE7A0; --new-bg:#12331F;
+    --gap:#FBBF5C; --gap-bg:#3A2A10;
+  }
+  * { box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:'Lato',-apple-system,sans-serif; font-size:15.5px; line-height:1.62; margin:0; }
+  .wrap { max-width:940px; margin:0 auto; padding-left:20px; padding-right:20px; padding-block:32px 64px; }
+  h1,h2,h3,.eyebrow,.num,.chip,.label,.big { font-family:'Figtree',-apple-system,sans-serif; }
+  .eyebrow { font-size:11px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--royal); margin:0 0 10px; }
+  h1 { font-size:clamp(30px,5.4vw,46px); font-weight:800; line-height:1.05; letter-spacing:-.02em; color:var(--ink-strong); margin:0 0 16px; text-wrap:balance; }
+  .standfirst { font-size:18px; max-width:62ch; margin:0 0 32px; }
+  section { margin-bottom:46px; }
+  h2 { font-size:22px; font-weight:800; color:var(--ink-strong); margin:0 0 4px; display:flex; align-items:baseline; gap:12px; border-top:2px solid var(--royal); padding-top:16px; }
+  h2 .num { font-size:13px; font-weight:800; color:var(--royal); font-variant-numeric:tabular-nums; flex:none; }
+  .sub { margin:0 0 22px; padding-left:33px; font-size:14.5px; color:var(--mid); font-weight:700; max-width:64ch; }
+  .body { padding-left:33px; }
+  @media (max-width:600px){ .sub,.body{ padding-left:0; } }
+  p { margin:0 0 14px; max-width:68ch; }
+  ul,ol { margin:0 0 14px; padding-left:20px; }
+  li { margin-bottom:7px; max-width:66ch; }
+  h3 { font-size:17px; font-weight:800; color:var(--ink-strong); margin:22px 0 8px; }
+
+  .thesis { background:var(--tint); border-left:4px solid var(--royal); padding:20px 22px; margin-bottom:24px; }
+  .thesis .big { font-size:23px; font-weight:800; color:var(--ink-strong); line-height:1.25; margin:0 0 10px; max-width:24ch; }
+  .thesis p:last-child { margin-bottom:0; }
+
+  .oldnew { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:18px; }
+  @media (max-width:560px){ .oldnew{ grid-template-columns:1fr; } }
+  .on-card { border:1px solid var(--rule); padding:15px 17px; background:var(--card); }
+  .on-card.old { border-top:3px solid var(--old); }
+  .on-card.new { border-top:3px solid var(--new); }
+  .on-card .label { font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; display:block; margin-bottom:6px; }
+  .on-card.old .label { color:var(--old); }
+  .on-card.new .label { color:var(--new); }
+  .on-card p { font-size:14.5px; margin-bottom:0; max-width:none; }
+  .on-card p + p { margin-top:8px; }
+
+  .five { list-style:none; padding:0; margin:0; counter-reset:f; display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  .five li { background:var(--card); margin:0; max-width:none; padding:16px 18px 16px 52px; position:relative; counter-increment:f; }
+  .five li::before { content:counter(f); position:absolute; left:18px; top:16px; font-family:'Figtree',sans-serif; font-weight:800; font-size:15px; color:var(--royal); font-variant-numeric:tabular-nums; }
+  .five strong { font-family:'Figtree',sans-serif; font-size:16.5px; color:var(--ink-strong); display:block; margin-bottom:4px; }
+  .five .d { font-size:14.5px; display:block; }
+
+  .rail { border-top:1px solid var(--rule); }
+  .rail-row { display:grid; grid-template-columns:118px 1fr; gap:18px; padding-block:13px; border-bottom:1px solid var(--rule); align-items:start; }
+  .rail-when { font-family:'Figtree',sans-serif; font-weight:800; font-size:13.5px; color:var(--royal); }
+  .rail-what { font-size:14.5px; }
+  .rail-what p { margin-bottom:6px; font-size:14.5px; max-width:60ch; }
+  .rail-what p:last-child { margin-bottom:0; }
+  .rail-row.hot { background:var(--tint); }
+  @media (max-width:560px){ .rail-row{ grid-template-columns:1fr; gap:3px; } }
+
+  .tool { border:1px solid var(--rule); border-left:3px solid var(--mid); background:var(--card); padding:15px 18px; margin-bottom:14px; }
+  .tool h3 { margin:0 0 7px; font-size:16px; }
+  .tool p:last-child { margin-bottom:0; }
+  .tool p { font-size:14.5px; }
+
+  .audit { list-style:none; padding:0; margin:0; display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); }
+  .audit li { background:var(--card); margin:0; max-width:none; padding:16px 18px; }
+  .audit .q { font-family:'Figtree',sans-serif; font-weight:800; color:var(--ink-strong); font-size:16.5px; display:block; margin-bottom:6px; }
+  .audit .v { font-size:14.5px; display:block; margin-bottom:8px; }
+  .audit .fix { font-size:14.5px; display:block; background:var(--gap-bg); color:var(--gap); padding:10px 13px; font-weight:700; }
+  :root[data-theme="dark"] .audit .fix, :root:not([data-theme="light"]) .audit .fix { color:var(--gap); }
+
+  blockquote { margin:0 0 14px; padding:0 0 0 17px; border-left:3px solid var(--mid); font-size:16.5px; font-weight:700; color:var(--ink-strong); max-width:56ch; }
+  .note { padding:12px 15px; background:var(--tint); font-size:13.5px; margin-bottom:16px; }
+  .note p { margin-bottom:0; font-size:13.5px; max-width:64ch; }
+  .note strong { color:var(--ink-strong); }
+  footer { border-top:2px solid var(--royal); padding-top:16px; font-size:13px; color:var(--mid); font-weight:700; }
+</style>
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<p style="font-family:Figtree,sans-serif;font-size:13px;font-weight:700;max-width:960px;margin:0 auto;padding:14px 20px 0"><a href="index.html" style="color:#2428B8">&larr; All documents</a></p>
+<div class="wrap">
+
+  <p class="eyebrow">Working notes &middot; distilled from the training Kan sent</p>
+  <h1>Workshops that sell without a pitch</h1>
+  <p class="standfirst">The whole framework in one page, then an honest audit of where the 27 October run sheet currently fails it. The source is Taki Moore's session on influential content, with credits inside to Simon Bowen for the red and green models and Joanna Martin for the two hats. None of this is Alaya's own material.</p>
+
+  <section>
+    <h2><span class="num">01</span>The one idea everything else hangs off</h2>
+    <div class="body">
+      <div class="thesis">
+        <p class="big">It is teach and sell, not teach then sell.</p>
+        <p>The word "then" is the entire problem. It splits the hour into an activity you are confident at and an activity you are nervous about, and the audience feels the seam. Fix the word and the seam disappears.</p>
+      </div>
+      <p>Which means 2 things in practice. When you are teaching, you are teaching people what to want. When you are selling, you are doing it in a way that genuinely is content rather than merely feels like it. There is no teaching block and no selling block, the whole session is both.</p>
+      <p>The claim behind the session is that a 2 hour workshop needs roughly 6 deliberately placed moments, adding maybe 10 to 15 minutes of content, and those replace a 30 minute pitch with a 5 minute invitation.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>The 5 principles</h2>
+    <div class="body">
+      <ul class="five">
+        <li><strong>Teach and sell</strong><span class="d">Integrated the whole way through, never sequenced.</span></li>
+        <li><strong>Align the offer</strong><span class="d">If the workshop is about one thing and the offer is about another, it lands like an ad break in the middle of a show people chose to watch. Either tweak the workshop or wrap the offer so the first part of what they buy is the topic they just sat through.</span></li>
+        <li><strong>Architect the timeline</strong><span class="d">Create tension, relieve it, create it again. Critically, do not relieve all of it at the end, or the honest reaction is "thanks, problem solved" and they leave.</span></li>
+        <li><strong>Teach them what to want</strong><span class="d">Nobody takes an action they have not first imagined taking. So show real pieces of the product as content and let them picture being inside it.</span></li>
+        <li><strong>Always be creating or relieving tension</strong><span class="d">Every segment does one or the other, on purpose.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>The build order, and why it matters</h2>
+    <p class="sub">Useful, then fun, then sell. In that order and not another.</p>
+    <div class="body">
+      <ol>
+        <li><strong>Useful.</strong> Everything you could teach on the topic, then the order it goes in.</li>
+        <li><strong>Fun.</strong> The activities, so people move from understanding it in their head to doing something with their hands. Finished is ideal, started is enough.</li>
+        <li><strong>Sell.</strong> Only once the first 2 are laid out, go back and ask where you can seed.</li>
+      </ol>
+      <p>The reason the order matters is that the failure mode is doing step 3 first and building a pitch with teaching wrapped around it. The admission in the session is that after moving from free webinars to paid workshops he forgot step 3 entirely for the first 2 or 3 events, sold almost nothing live, and only recovered it in the follow-up emails.</p>
+      <div class="note"><p><strong>Worth noting for us:</strong> this is the exact failure of the 15 September session. Genuinely useful, 64 registrations, and no offer in it at all.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>The timeline, segment by segment</h2>
+    <div class="body">
+      <div class="rail">
+        <div class="rail-row">
+          <span class="rail-when">Day before</span>
+          <span class="rail-what"><p>The reminder email mentions that a limited number of spots open on the session, and offers a sneak peek link for anyone who wants it early.</p></span>
+        </div>
+        <div class="rail-row hot">
+          <span class="rail-when">First 10 minutes</span>
+          <span class="rail-what">
+            <p><strong>Whole, part, whole.</strong> Show the complete model first. Here are the 9 things you need. Tonight we are doing 1 of them. That single move creates the gap for free, because the audience does the subtraction themselves.</p>
+            <p>Then mention the spots, and rather than posting the offer document, invite people to ask for it. Type the keyword in the chat and it gets sent. Two effects: you are no longer selling, you are responding to requests, and the chat filling with the keyword is visible proof of demand to everyone watching.</p>
+          </span>
+        </div>
+        <div class="rail-row">
+          <span class="rail-when">The middle</span>
+          <span class="rail-what"><p>The teaching, with the seeded moments distributed through it. Each teaching point ends with one interactive question.</p></span>
+        </div>
+        <div class="rail-row hot">
+          <span class="rail-when">Before the invitation</span>
+          <span class="rail-what">
+            <p><strong>Put them back in the "I need help" position.</strong> Having just delivered the whole promise, ask what the top 3 things are that will make this hard to actually implement. They type their own obstacles into the chat.</p>
+            <p>This is the highest-leverage move in the entire framework. The audience generates its own need, in its own words, seconds before the offer. Skip it and you have relieved all the tension and they thank you and go.</p>
+          </span>
+        </div>
+        <div class="rail-row">
+          <span class="rail-when">The invitation</span>
+          <span class="rail-what"><p>Zoom back out. We did 1 of the 9. Here is what the other 8 look like. Short, because the work is already done.</p></span>
+        </div>
+        <div class="rail-row hot">
+          <span class="rail-when">The party</span>
+          <span class="rail-what">
+            <p>Open Q and A in overtime, and this is where most applications come. The rough shape given was 1 from the opening, 2 to 3 from the middle, 2 to 3 at the invitation, and 10 or more during the Q and A.</p>
+            <p>Questions in the chat rather than unmuted, for call control. Answer in a fixed order: offer questions first, topic questions second, anything at all third. Behind every question, whatever the words, the real question is "is this right for me", so answer that one.</p>
+          </span>
+        </div>
+      </div>
+
+      <h3>Two details in the Q and A worth stealing</h3>
+      <ul>
+        <li><strong>Tell people when it is not for them.</strong> If you look like this, come. If you look like that, do not. Counterintuitively this raises conversion in everyone who remains, because it proves a real threshold exists.</li>
+        <li><strong>Use a wingman.</strong> Someone else says the things the host is too modest to say, mentions remaining spots in real time, and gives the host a breath. The point made was that it only works because the wingman actually believes it.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Old way, new way</h2>
+    <p class="sub">The core belief-shifting device. Every piece of content gets one.</p>
+    <div class="body">
+      <p>Draw a line in the sand, put pain on one side and pleasure on the other, and make people choose. The structure for breaking a belief runs: what do most people think, why is that a mistake, what does it cost them, then what you believe instead, why, and what the result is.</p>
+      <div class="oldnew">
+        <div class="on-card old"><span class="label">Old way</span><p>Teach, then sell. Confident for 50 minutes, sweaty for 10, and nobody buys.</p></div>
+        <div class="on-card new"><span class="label">New way</span><p>Teach and sell, integrated, so the invitation is 5 minutes because the work already happened.</p></div>
+      </div>
+      <p>The framing device that ties them together: open by saying your job tonight is to help them make 4 or 5 good decisions. Then each old-versus-new becomes a decision they commit to in the chat as you go. By the time the offer arrives it is simply the last decision in a series they have already been making all night.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Four tools for stretching the gap</h2>
+    <div class="body">
+      <div class="tool">
+        <h3>Models</h3>
+        <p>Simple shapes with a red half and a green half. A circle for what share of people make it. A triangle with 4 levels that collapses into 2, such as enough leads or not enough. A rectangle contrasting effort against impact, like grinding out content daily for 1 client versus building an asset once. People place themselves, and placing themselves in the red half is the whole point.</p>
+      </div>
+      <div class="tool">
+        <h3>Metrics</h3>
+        <p>Get people to score themselves so they feel the gap. Traffic lights work. A 1 to 10 scale is weaker because it has a middle, and the line used was that 7 is a lie. The recommended one is a 4 point scale with no middle, such as terrible, bad, okay, great, which forces everyone into either not good enough or good enough.</p>
+      </div>
+      <div class="tool">
+        <h3>Metaphors</h3>
+        <p>Contrasting pairs do the heavy lifting. The example given was marketing yourself like a 7-Eleven, open all hours, taking anyone who walks in, selling average things at okay prices, against a small restaurant with a 6 week waiting list where you show up on time and eat what the chef decides.</p>
+      </div>
+      <div class="tool">
+        <h3>Questions</h3>
+        <p>Three kinds, and you only need one per teaching point. <strong>Reality:</strong> how is this different from how you have been doing it, and what has the old way cost you. <strong>Results:</strong> if you implemented this exactly, what would the best part be, and what would a great first result look like. <strong>Roadblocks:</strong> what are the top 3 things that will get in the way, what have you tried that has not worked, and what stories are you telling yourself about why you cannot. Note that roadblocks is deliberately not the word objections.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Product placement, and contentimonials</h2>
+    <div class="body">
+      <h3>Make the offer document part of the content</h3>
+      <p>The demonstration given was a planted question. Someone asks for an example of a concept just taught, and the example is literally the next page of the program's own material, so explaining the product is the teaching. The most memorable version described was teaching people how to write a video sales letter by reading his own out loud while rewriting it.</p>
+      <p>The softer mechanic: show the real system, ask which 2 pieces they would build first, ask what that would do for them, let them answer. They have now imagined being inside the product and described the benefit in their own words. Then you simply note that inside the program each of those pieces opens a training and a template.</p>
+      <p>There is also an honest version worth knowing, credited to Joanna Martin: 2 physical hats, one for teaching and one for selling, switched openly so the audience always knows which mode you are in.</p>
+
+      <h3>Contentimonials</h3>
+      <p>Case studies woven into the teaching rather than stacked in a block. The structure is the business problem, how it affected them personally, <strong>the objection that nearly stopped them</strong>, the moment it changed, the old way, the new way, and the results with business first and personal second. Finish by tying it back to the entry point, as in "and it all started with a 15 minute call", because that seeds the next step without pitching it.</p>
+      <p>The variant worth using for founder stories is the experiment debrief. Here was the problem, here was my hypothesis, we ran it for 3 months, here is what happened. It works because it shows the expert was once exactly where the audience is.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Where our 27 October run sheet currently fails this</h2>
+    <p class="sub">Honest audit. Most of the gaps are cheap to close and 2 of them are not.</p>
+    <div class="body">
+      <ul class="audit">
+        <li>
+          <span class="q">There is no whole, part, whole</span>
+          <span class="v">The run sheet opens straight into the contrarian line, which is strong, but it never shows the full Alaya model. The audience never learns there are 9 things and they are getting 1.</span>
+          <span class="fix">Fix: open with the pyramid, macro to state and region to suburb to property, plus the 45 and 49 point checks. Say tonight we are doing 1 layer of it. Costs 90 seconds and creates the gap for free.</span>
+        </li>
+        <li>
+          <span class="q">The offer appears once, at minute 48</span>
+          <span class="v">That is exactly the teach then sell shape the framework exists to break.</span>
+          <span class="fix">Fix: introduce it in the first 10 minutes as something people ask for. Alaya already runs a comment keyword on Instagram through ManyChat, so the same mechanic works in webinar chat. The chat filling up is the demand signal.</span>
+        </li>
+        <li>
+          <span class="q">We relieve all the tension and then ask for the sale</span>
+          <span class="v">Minute 42 hands over the complete method, minute 48 makes the offer. That sequence produces "thanks, that was great" and nothing else.</span>
+          <span class="fix">Fix: insert a roadblock question at minute 46. Ask what the top 3 things are that will make this hard to actually do. The answers will be not knowing which suburb, no time, cannot tell a good comparable from a bad one, cannot read a due diligence report. Those are precisely the 3 education assets and the service.</span>
+        </li>
+        <li>
+          <span class="q">Q and A is 5 minutes at the end</span>
+          <span class="v">If the ratio in the session is anywhere near right, we have scheduled 5 minutes for the segment that produces most of the conversions.</span>
+          <span class="fix">Fix: run the session to minute 50, invite, then hold an open Q and A in overtime with no hard finish. Offer questions first, topic questions second, anything third. Nathan runs chat, Adi and Redom answer.</span>
+        </li>
+        <li>
+          <span class="q">Nobody is playing wingman</span>
+          <span class="v">Adi and Redom are both presenting, so neither can say the things the other is too modest to say, and neither can call out remaining spots in real time.</span>
+          <span class="fix">Fix: put a third person on with a clear job. This is the role the sales team should want, and it is the cheapest conversion gain available.</span>
+        </li>
+        <li>
+          <span class="q">Alignment is only half there</span>
+          <span class="v">The education pack aligns beautifully, because the session literally walks through its 3 documents. The strategy session does not obviously follow from a talk titled buy now or wait.</span>
+          <span class="fix">Fix: wrap it. Make the first deliverable of the strategy session a written buy-or-wait position on the client's own situation under the new rules. Then the hour sells both doors instead of one.</span>
+        </li>
+        <li>
+          <span class="q">Old way and new way is present but never named</span>
+          <span class="v">We have 2 strong ones already: buy before the deadline versus the deadline expired in May, and buy a new build for the tax break versus buy what actually grows. They are in the content but nobody is asked to choose.</span>
+          <span class="fix">Fix: open with "tonight my job is to help you make 3 decisions", make those 2 the first and second, and make do it yourself versus done with you the third. The offer then stops being a pitch and becomes decision 3.</span>
+        </li>
+        <li>
+          <span class="q">No self-scoring moment</span>
+          <span class="v">Nothing in the hour asks the audience to rate where they currently stand, so nobody feels their own gap.</span>
+          <span class="fix">Fix: we already own a 4 point scale. The due diligence output grades every check as clear, worth a closer look, or below standard. Ask the room to grade their own last purchase decision the same way.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>What I would actually change tomorrow</h2>
+    <div class="body">
+      <p>If the call with Redom and Adi only has room for 3 changes, make them these, because they are the ones that alter the outcome rather than the polish.</p>
+      <ol>
+        <li><strong>The roadblock question at minute 46.</strong> Single highest-leverage addition, costs 2 minutes, and it is the difference between an audience that feels finished and an audience that feels stuck.</li>
+        <li><strong>Move the offer into the first 10 minutes as a chat request.</strong> Not a pitch, an invitation to ask. It also tells you within 10 minutes how the session is tracking.</li>
+        <li><strong>Extend the Q and A and put a third person on it.</strong> We are currently allocating 5 minutes to the part that converts.</li>
+      </ol>
+      <div class="note"><p><strong>One thing to be careful with.</strong> This framework was built for coaching programs, where scarcity and a monthly intake are genuine. Alaya sells property advice to people making a 6 or 7 figure decision, and a manufactured "15 spots" line would be corrosive to the credibility the whole campaign is built on. Use the mechanics, and only claim scarcity where it is actually true.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Distilled 20 September 2026 from a training recording, for internal use. Framework and examples belong to their original authors.
+  </footer>
+
+</div>
+</body>
+</html>

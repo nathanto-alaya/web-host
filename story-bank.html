@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>October Webinar Story Bank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Lato:wght@400;700&display=swap">
+<style>
+  :root {
+    --royal: #1A1C8F; --navy: #0D0E5C; --mid: #2428B8; --tint: #E8E9F8;
+    --paper: #FAFAFD; --card: #FFFFFF; --ink: #0D0E5C; --ink-strong: #07082E;
+    --rule: #C9CBEC; --solid: #15803D; --solid-bg: #E4F4EA;
+    --check: #B45309; --check-bg: #FBEEDC; --risk: #B0102F; --risk-bg: #FBE4E8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --royal: #9EA2FF; --navy: #0A0B33; --mid: #7C82FF; --tint: #191B52;
+      --paper: #07082A; --card: #101243; --ink: #EDEEFF; --ink-strong: #FFFFFF;
+      --rule: #343878; --solid: #6EE7A0; --solid-bg: #12331F;
+      --check: #FBBF5C; --check-bg: #3A2A10; --risk: #FF8FA3; --risk-bg: #3D1220;
+    }
+  }
+  :root[data-theme="dark"] {
+    --royal: #9EA2FF; --navy: #0A0B33; --mid: #7C82FF; --tint: #191B52;
+    --paper: #07082A; --card: #101243; --ink: #EDEEFF; --ink-strong: #FFFFFF;
+    --rule: #343878; --solid: #6EE7A0; --solid-bg: #12331F;
+    --check: #FBBF5C; --check-bg: #3A2A10; --risk: #FF8FA3; --risk-bg: #3D1220;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Lato', -apple-system, sans-serif; font-size: 15.5px; line-height: 1.62; margin: 0; }
+  .wrap { max-width: 980px; margin: 0 auto; padding-left: 20px; padding-right: 20px; padding-block: 32px 64px; }
+  h1, h2, h3, .eyebrow, .tag, .num, .slot, .label { font-family: 'Figtree', -apple-system, sans-serif; }
+  .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--royal); margin: 0 0 10px; }
+  h1 { font-size: clamp(30px, 5.4vw, 44px); font-weight: 800; line-height: 1.06; letter-spacing: -.02em; color: var(--ink-strong); margin: 0 0 16px; text-wrap: balance; }
+  .standfirst { font-size: 18px; max-width: 64ch; margin: 0 0 32px; }
+  section { margin-bottom: 46px; }
+  h2 { font-size: 21px; font-weight: 800; color: var(--ink-strong); margin: 0 0 4px; display: flex; align-items: baseline; gap: 12px; border-top: 2px solid var(--royal); padding-top: 16px; }
+  h2 .num { font-size: 13px; font-weight: 800; color: var(--royal); font-variant-numeric: tabular-nums; flex: none; }
+  .sub { margin: 0 0 22px; padding-left: 33px; font-size: 14.5px; color: var(--mid); font-weight: 700; max-width: 64ch; }
+  .body { padding-left: 33px; }
+  @media (max-width: 600px) { .sub, .body { padding-left: 0; } }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 7px; max-width: 66ch; }
+  blockquote { margin: 0 0 12px; padding: 0 0 0 16px; border-left: 3px solid var(--mid); font-size: 16px; font-weight: 700; color: var(--ink-strong); max-width: 58ch; }
+
+  .story { border: 1px solid var(--rule); border-top: 3px solid var(--royal); background: var(--card); padding: 18px 20px; margin-bottom: 20px; }
+  .story-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; margin-bottom: 12px; }
+  .slot { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--royal); background: var(--tint); padding: 4px 9px; }
+  .story h3 { margin: 0; font-size: 19px; font-weight: 800; color: var(--ink-strong); letter-spacing: -.01em; flex: 1 1 240px; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; }
+  .t-solid { background: var(--solid-bg); color: var(--solid); }
+  .t-check { background: var(--check-bg); color: var(--check); }
+  .t-risk { background: var(--risk-bg); color: var(--risk); }
+  .field { display: grid; grid-template-columns: 104px 1fr; gap: 14px; padding-block: 7px; border-top: 1px solid var(--rule); align-items: baseline; }
+  .label { font-size: 10.5px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; color: var(--mid); }
+  .field .v { font-size: 14.5px; }
+  .field .v p { margin-bottom: 6px; max-width: 60ch; }
+  .field .v p:last-child { margin-bottom: 0; }
+  .field .v ul { margin-bottom: 0; }
+  .field .v li { font-size: 14px; margin-bottom: 3px; }
+  @media (max-width: 560px) { .field { grid-template-columns: 1fr; gap: 2px; } }
+  .story.reserve { border-top-color: var(--mid); }
+
+  .callout { border-left: 4px solid var(--royal); background: var(--tint); padding: 16px 18px; margin: 0 0 20px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--ink-strong); }
+  .scroller { overflow-x: auto; margin-bottom: 18px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-family: 'Figtree', sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--royal); background: var(--tint); border-bottom: 2px solid var(--royal); }
+  td.lead { font-family: 'Figtree', sans-serif; font-weight: 700; color: var(--ink-strong); }
+  td.n { font-variant-numeric: tabular-nums; }
+  footer { border-top: 2px solid var(--royal); padding-top: 16px; font-size: 13px; color: var(--mid); font-weight: 700; }
+</style>
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<p style="font-family:Figtree,sans-serif;font-size:13px;font-weight:700;max-width:960px;margin:0 auto;padding:14px 20px 0"><a href="index.html" style="color:#2428B8">&larr; All documents</a></p>
+<div class="wrap">
+
+  <p class="eyebrow">Alaya Property &middot; October webinar campaign</p>
+  <h1>The story bank</h1>
+  <p class="standfirst">Real Alaya material, pulled from the purchase register, the client story packs, the founder scripts and the 2027 modelling, then sequenced against the campaign. Every story carries its source, its verification status and the job it does in the funnel.</p>
+
+  <section>
+    <h2><span class="num">01</span>What makes an Alaya story land</h2>
+    <p class="sub">Drawn from the stories that already perform, not invented rules.</p>
+    <div class="body">
+      <ul>
+        <li><strong>The belief comes before the number.</strong> Every strong story in the archive opens on something the reader already believes, then breaks it. "She was told she needed $600,000" beats "client buys for $337,000" every time.</li>
+        <li><strong>Somebody was against it.</strong> The best-performing stories all contain a doubter: family, a broker, a podcast listener's own scepticism, the whole market. The doubter is what makes the result mean something.</li>
+        <li><strong>Adi was scared too.</strong> The stories where he admits the business was 1 month old, or that he had no conviction 2 years ago, outperform the ones where he is certain. Certainty reads as sales, doubt reads as a person.</li>
+        <li><strong>One number, placed late.</strong> The archive's own house rule is no number in the opening line. The figure lands after the reader is already in the story.</li>
+        <li><strong>Name the thing that was given up.</strong> A rejection, a walk-away, a market Alaya said no to. The rejections build more trust than the wins, and Alaya has better rejection material than almost anyone.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>The spine that ties every email to this webinar:</strong> the deadline being advertised everywhere already passed on 12 May 2026, so the question stopped being when and became what. Each email below is one angle on that same turn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Pre-webinar sequence</h2>
+    <p class="sub">8 sends across the 17 days from ads live to session day, to the database and as retargeting fuel. Ordered so belief breaks first and proof follows.</p>
+    <div class="body">
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 1 &middot; T minus 17</span><h3>The deadline you are being sold already expired</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>Every ad in their feed says buy before July 2027 to keep negative gearing. That door shut on budget night, 12 May 2026, at 7:30pm. Anyone buying today is already inside the new regime. There is nothing left to beat.</p></span></div>
+        <div class="field"><span class="label">The line</span><span class="v"><blockquote>Any campaign telling you to buy before July 2027 to keep your negative gearing is selling you something. That door shut in May 2026.</blockquote></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Opens the campaign by contradicting the campaign everyone else is running. Highest possible credibility for the lowest possible cost, because it is simply true and checkable.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>2027 Rule Change Playbook, Alaya's own modelling. Confirmed against the ATO's published reform page.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 2 &middot; T minus 14</span><h3>She was told she needed $600,000. She paid $337,000.</h3><span class="tag t-check">Strip the name</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>A 29-year-old nurse. For years her broker and her family told her she needed at least $600,000 to get a foot in the door. She bought for $337,000 about 14 months ago. It is now valued around $575,000 off comparable sales, roughly $238,000 of equity.</p><p>The reason it worked was boring: population growing, stable job market, not enough homes.</p></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Breaks the single most common reason people never start, which is the belief that the entry number is far higher than it is. Strongest emotional opener in the bank.</p></span></div>
+        <div class="field"><span class="label">Watch</span><span class="v"><p>The source email uses her first name. Suburb and numbers only. The current value is an estimate off comparables, not a bank valuation, and has to be labelled as such.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>Adi EDM, 11 Sep 2026.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 3 &middot; T minus 12</span><h3>I lost money on my first property, and it is the reason this business exists</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>Adi at 23, signing for a house in regional Victoria at $213,000, hand shaking. Sold it 2 years later for $215,000, which after buying, holding and selling costs means he lost money. The deposit took nearly 5 years to save while working more than 1 job, and he has said plainly that it felt humiliating.</p></span></div>
+        <div class="field"><span class="label">The line</span><span class="v"><blockquote>Fear is not information. The fear was telling me I'd made the worst decision of my life. The fear was flat out wrong.</blockquote></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Earns the right to give advice by opening with a failure. Also the natural bridge into the webinar's real subject, which is that the decision is now about what you buy rather than when.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>Reels caption bank, 12 Aug 2026, plus Adi's own VSL commentary, Aug 2026.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 4 &middot; T minus 10</span><h3>He bought after 13 consecutive rate rises</h3><span class="tag t-solid">Bank valued</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>Bought in Bundaberg, Queensland, in June 2024 at $720,000, after 13 straight rate rises, with everyone in his life telling him he was being an idiot. An independent bank valuation roughly 2 years later came back at $989,000. A $269,000 lift.</p></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Directly answers the "surely now is a bad time" objection, which the sales team reports as the single most common stall. This one is bank valued rather than estimated, so it carries weight the estimates cannot.</p></span></div>
+        <div class="field"><span class="label">Pairs with</span><span class="v"><p>The same email can carry Gordonvale, Queensland: $635,000 in April 2024, bank valued at $844,000 about 2 years on, bought when Alaya was 1 month old and Adi had no team. Adi has said he was as terrified as the clients were.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>Client results pack, Jun 2026, and Adi EDM, 3 Jul 2026.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 5 &middot; T minus 8</span><h3>Most of what we get paid for is the properties we talk clients out of</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>Roughly 9.3 out of every 10 properties assessed do not make it through. Then show 3 real rejections and the single reason each one failed:</p><ul><li>A Werribee house on 652 square metres: a bus stop directly opposite, a second next door, a fast road, an easement through the rear. Parked.</li><li>A Pakenham property on 789 square metres at about $750,000: 50 metres from a main road, opposite a complex with late-night venues, 75 metres from a flood zone. Ruled out.</li><li>A Williamstown unit under $500,000: backing onto a station about 100 metres away. Ruled out on rail proximity alone.</li></ul></span></div>
+        <div class="field"><span class="label">The line</span><span class="v"><blockquote>You can renovate a kitchen. You can't move a train line.</blockquote></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Answers the trust objection the sales team keeps hitting after competitor collapses. A business that shows its rejections is not the business people are afraid of.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>Rejection EDM, Aug 2026. Addresses appear in the source and must be reduced to suburb only.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 6 &middot; T minus 6</span><h3>The new build carve-out is worth $73,931, and it still loses</h3><span class="tag t-solid">Alaya modelling</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>New builds keep negative gearing under the new rules. That is worth $73,931 against wages, which sounds like the end of the argument until you run the break-even. It is a growth gap of only 0.3% a year. At a 0.5% gap the new build finishes $24,006 behind. At Alaya's working assumption of 1.5%, it finishes $109,435 behind, which is 30% of the whole result.</p></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>This is the webinar's second worked example, previewed. It gives the session something specific to promise rather than a general framework, which is what the registration page needs.</p></span></div>
+        <div class="field"><span class="label">Pairs with</span><span class="v"><p>Melton West at $585,000 on a 1,051 square metre block, where land in the area was trading at a rate that made the house effectively free. Adi's line: shiny new build on 350 square metres, or the tired-looking house on 750 square metres around the corner.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>2027 Rule Change Playbook. Melton West from Adi EDM, 9 Jul 2026.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 7 &middot; T minus 4</span><h3>The market everyone called us crazy for backing is up $246,000</h3><span class="tag t-check">Strip the name</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>A Darwin-region purchase at $430,000, now valued around $676,000 off comparable sales, roughly $246,000 in about 12 months. The client is an engineer who, in Adi's words, lives inside spreadsheets and puts no credence in vibes.</p><p>When Alaya first backed Darwin on the podcast, almost everyone said they were crazy, because the market had done very little for 10 to 15 years.</p></span></div>
+        <div class="field"><span class="label">The line</span><span class="v"><blockquote>Buy while it's still awkward to explain at whatever barbecue you might be going to. The stuff that's easy to explain has usually already had its time in the sun.</blockquote></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Proves the method works on markets before they are obvious, which is exactly the claim the webinar makes about what the new rules reward. Last substantive send before the reminders.</p></span></div>
+        <div class="field"><span class="label">Watch</span><span class="v"><p>First name in source. Estimated value, not a bank valuation.</p></span></div>
+        <div class="field"><span class="label">Source</span><span class="v"><p>Adi EDM, 18 Sep 2026.</p></span></div>
+      </div>
+
+      <div class="story">
+        <div class="story-head"><span class="slot">Send 8 &middot; Day of</span><h3>Tonight: the one chart that changes what you buy</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">The turn</span><span class="v"><p>No story. State the single finding the session turns on and stop: the reform is not a flat tax on property investors, it is a tax on nominal capital growth. At 4% to 5% growth the new rules leave you better off. At 7% to 8% they cost real money.</p><p>Then the logistics and the link.</p></span></div>
+        <div class="field"><span class="label">The job</span><span class="v"><p>Registration recovery and attendance. Curiosity with a specific shape, not a countdown.</p></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>After the session</h2>
+    <p class="sub">Two branches. The split matters because a no-show and an attendee are at completely different points.</p>
+    <div class="body">
+      <div class="scroller">
+        <table>
+          <thead><tr><th>Timing</th><th>Attended</th><th>Registered, did not attend</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="lead">Plus 2 hours</td>
+              <td>Free report, the replay link, and the 2 doors named once each with prices. Nothing else in the email.</td>
+              <td>Replay link with the growth-rate finding stated in the first 2 lines, so the email has value even if they never watch.</td>
+            </tr>
+            <tr>
+              <td class="lead">Plus 1 day</td>
+              <td>The question most asked on the night, answered properly and at length. Positions Alaya as the place answers come from.</td>
+              <td>The new build trap in full, with the $109,435 figure. The strongest standalone argument from the session.</td>
+            </tr>
+            <tr>
+              <td class="lead">Plus 3 days</td>
+              <td>One client story matched to the objection the room raised most. Pull it from the reserve below once the Q and A is reviewed.</td>
+              <td>The rejection story. Builds the trust the no-shows never got from watching a founder live.</td>
+            </tr>
+            <tr>
+              <td class="lead">Plus 7 days</td>
+              <td>The honest fork. Who should take the education pack, who should take the strategy session, and who should do neither yet. Naming the third group is what makes the first 2 credible.</td>
+              <td>Same fork, plus a line that the next session is already scheduled, so leaving is cheap.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <p><strong>Capture the questions on the night.</strong> The single most valuable input for the follow-up sequence is the actual Q and A, and it was missed after the September session. Assign someone to log every question verbatim in chat while the session runs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Reserve stories</h2>
+    <p class="sub">Strong material not used above. Pull from here once the Q and A tells you which objection to answer.</p>
+    <div class="body">
+
+      <div class="story reserve">
+        <div class="story-head"><h3>The granny flat that paid from day 1</h3><span class="tag t-solid">Independently valued</span></div>
+        <div class="field"><span class="label">Detail</span><span class="v"><p>Hoppers Crossing, Victoria, August 2025. $815,000 for a 5-bedroom house with a pre-built 2-bedroom granny flat on one title. Independently valued at $912,000 four months later, about $97,000 up, running a 5.7% yield from day 1. The client is planning 2 more purchases.</p></span></div>
+        <div class="field"><span class="label">Answers</span><span class="v"><p>"I can't afford to hold something negatively geared." Also the cleanest cash flow proof in the bank, which matters more now that negative gearing is quarantined on established stock.</p></span></div>
+      </div>
+
+      <div class="story reserve">
+        <div class="story-head"><h3>Equity before the keys changed hands</h3><span class="tag t-solid">Bank valued</span></div>
+        <div class="field"><span class="label">Detail</span><span class="v"><p>Hamilton, regional Victoria, 2025. Bought at $370,000 against a $400,000 budget, and the bank valuation on the day of purchase came in at $470,000. $100,000 of equity before settlement. Sub-1% vacancy pocket. The client came back for a second deal.</p></span></div>
+        <div class="field"><span class="label">Answers</span><span class="v"><p>"Buyer's agents just find you something on realestate.com." A valuation gap on the day of purchase is the hardest possible evidence that the price was the work.</p></span></div>
+      </div>
+
+      <div class="story reserve">
+        <div class="story-head"><h3>Burnt by the last buyer's agent</h3><span class="tag t-solid">Independently valued</span></div>
+        <div class="field"><span class="label">Detail</span><span class="v"><p>Pakenham, Victoria, July 2025. Budget $850,000, secured at $760,000, so $90,000 under budget. Independently valued at $813,000 six months later. The client had used a buyer's agent before and walked away feeling the due diligence had not been deep enough. He is now on his third investment property, his second with Alaya.</p></span></div>
+        <div class="field"><span class="label">Answers</span><span class="v"><p>The trust objection after competitor collapses, which the sales team reports as the biggest current headwind. This story answers it with someone who had already been let down.</p></span></div>
+      </div>
+
+      <div class="story reserve">
+        <div class="story-head"><h3>The ones who said no</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">Detail</span><span class="v"><p>Adi on the prospects who turned Alaya down. 10 or 15 have come back around through referrals or messages, and most of them still have not done anything, with anyone, 12 to 24 months later.</p></span></div>
+        <div class="field"><span class="label">The line</span><span class="v"><blockquote>The no was never the expensive bit. The 2 years that followed it were.</blockquote></span></div>
+        <div class="field"><span class="label">Answers</span><span class="v"><p>"I'll wait and see." The strongest cost-of-inaction argument in the archive, and it does not require a single price to make its point.</p></span></div>
+      </div>
+
+      <div class="story reserve">
+        <div class="story-head"><h3>The Brisbane rehearsal</h3><span class="tag t-solid">Verified</span></div>
+        <div class="field"><span class="label">Detail</span><span class="v"><p>In 2018 you could not give a Brisbane apartment away. Approvals had collapsed to 46% below the decade average while sentiment was still terrible. Over the following 5 years those apartments rose between 71% and 117%, at one point moving 16% in a single year, faster than houses.</p><p>The 4 signals were a flat decade, missing supply, rising demand and very low vacancy. Alaya's stated position is that Melbourne apartments show the same 4 now.</p></span></div>
+        <div class="field"><span class="label">Answers</span><span class="v"><p>"That market has been terrible for years." Carry the caveat Alaya already uses: no 2 markets are identical and this is not a promise Melbourne repeats Brisbane.</p></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Before anything ships</h2>
+    <div class="body">
+      <ul>
+        <li><strong>Names out, always.</strong> Several source emails carry client first names. Suburb and state plus numbers tells the story just as well, and that is already the house rule.</li>
+        <li><strong>Separate valuations from estimates.</strong> Bank and independent valuations can be stated as valuations. Everything else is an estimate from an automated field or comparable sales and must say so. Mixing the two is the fastest way to lose the credibility this campaign is built on.</li>
+        <li><strong>No per-deal "below market" claims.</strong> The register holds no suburb median at settlement, so a percentage-under-market figure cannot be supported deal by deal. The agency-level averages are separate and are sourced from the results page.</li>
+        <li><strong>3 number conflicts to resolve first.</strong> A Prahran unit appears at both $306,000 and $315,000. A block of 3 units appears as both $760,000 with offers at $1.19m and $705,000 with a unit selling at $355,000. The Melton hospital appears as both $900 million and about $1 billion.</li>
+        <li><strong>Do not present the 16-unit Glen Huntly block as an Alaya purchase.</strong> The original email states plainly that it was a sale Alaya tracked and commented on, not a deal it did.</li>
+        <li><strong>General information only.</strong> Alaya holds no AFSL and is not a registered tax agent. The tax content explains the law and shows the arithmetic, and stops there.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Built from Alaya's purchase register, client story packs, founder scripts and 2027 modelling. Internal use only, 20 September 2026.
+  </footer>
+
+</div>
+</body>
+</html>
